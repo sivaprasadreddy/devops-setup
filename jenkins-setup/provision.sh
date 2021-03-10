@@ -10,11 +10,6 @@ groupadd ${DEVOPSGROUP}
 echo "%${DEVOPSGROUP} ALL=(ALL:ALL) ALL" >> /etc/sudoers
 useradd -m -p $(openssl passwd -1 ${PASSWORD}) -s /bin/bash -G ${DEVOPSGROUP} ${USERNAME}
 
-# Install ansible
-sudo apt-get install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible --yes
-
 # Install docker
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common --yes
@@ -23,6 +18,11 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io --yes
 sudo usermod -aG docker ${USERNAME}
+
+# Install ansible
+sudo apt-get install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible --yes
 
 # Install openjdk-11-jdk
 sudo apt-get update
