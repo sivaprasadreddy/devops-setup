@@ -1,0 +1,9 @@
+[submodule "vote-service"]
+	path = vote-service
+	url = https://github.com/sivaprasadreddy/vote-service.git
+[submodule "bookmark-service"]
+	path = bookmark-service
+	url = https://github.com/sivaprasadreddy/bookmark-service.git
+[submodule "bookmarks-ui"]
+	path = bookmarks-ui
+	url = https://github.com/sivaprasadreddy/bookmarks-ui.git
