@@ -1,1 +1,3 @@
 .idea
+*.iml
+docker/filebeat/data/
